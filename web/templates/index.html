@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Главная страница
+{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static "css/index.css"%}">
+{% endblock style %}
+
+{% block content %}
+<p>Это главная страница</p>
+
+
+{% for product in products %}
+<p>{{product.name}} - {{product.price}}</p> {# вывод товара на главную страницу #} 
+{% endfor %}
+
+{% endblock content %}
